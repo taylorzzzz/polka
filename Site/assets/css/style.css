@@ -1,0 +1,289 @@
+/* Global Styling */
+    /*
+        h1,h2,h3,h4,h5 {
+            color:#000;
+        }
+        p {
+            color:#333;
+        }
+    */
+/* Page Template Styling */
+    header {
+        margin-bottom:50px;
+        text-align:left;
+    }
+    div.section {
+        
+    }
+    /* Home Page Styling */
+    .archive-post {
+        
+    }
+    .archive-post img {
+        border: #000 1px solid;
+    }
+    .archive-post a {
+        color:#000;
+    }
+    div.thumb-square {
+        border:1px solid #ddd;
+    }
+    div.thumb-square img {
+        max-width:100px;
+        height:auto;
+    }
+    div.thumb-right {
+        float:right;
+        margin: 10px 0px 5px 25px;
+    }
+    div.thumb-center {
+        width:100%;
+        height:200px;
+        border:1px solid #ddd;
+    }
+    div.thumb-center img {
+        width:100%;
+        height:100%;
+    }
+    .toplevel {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        margin-bottom:.8em;
+    }
+    
+
+
+/* LA HOMICIDES */
+    /* LANDING SECTION */
+         .la_homicides .section-landing {
+            background: #1e1d22;
+            color:#e8150e;
+        }
+/* IMDB VS RT */
+    /* LANDING SECTION */
+        .imdb-rt .section-landing {
+            background: #461AFF;
+            color:#FFF;
+        }
+    /* HISTOGRAM SECTION */
+        /* HISTOGRAM HISTO-SECTION */
+            .hist_tooltip {
+                            position:absolute;
+                            opacity:.5;
+                            font: 12px sans-serif;
+                            background: white;
+                            opacity: .6;
+                            border: 1px solid #461AFF;
+                            pointer-events: none;
+                            padding:3px;
+                            color:#999;
+                            max-width:200px;
+                        }
+            .hist_tooltip span {
+                            color:#461AFF;
+                        }
+            .hist_tooltip span.metric {
+                            color: #111;
+                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                            text-decoration: underline; 
+                        }
+            .hist_tooltip strong {
+                            color:#461AFF
+                        }
+            .bar {
+                            fill: #461AFF;
+                            stroke:#000;
+                            stroke-width:.5px;
+                        }
+            .histo-axis path, .histo-axis line{
+                            stroke: #999;
+                        }
+        /* HISTOGRAM RIGHT-COLUMN */
+            .right-column span{
+                            color:#461AFF;
+                            font-weight: 700;
+                        }
+            h3.metric-list-title {
+                    text-align: left;
+                    color:#461AFF;
+                    padding:0;
+                    margin-bottom:50px;
+                    border-bottom:solid #000;
+                    border-top:solid #000;
+                }
+            ul.metrics-list {
+                    list-style-type: none;
+                    padding:10px;
+                    line-height: 20px;
+                    border:10px solid #461AFF;
+                }
+            ul.metrics-list li {
+                    color:#000;
+                    font-size:15px;
+                    padding:10px;
+                }
+            ul.metrics-list span {
+                    color:#000;
+                    font-size:18px;
+                    margin-left:-10px;
+                    font-weight: 700;
+                }
+    /* Scatter Plot */
+        /* MAIN SCATTER */
+            /* General Scatter */
+                .scatter-content-container {
+                    color:#FFF;
+                }
+                .scatter-content {
+                    border:10px #461AFF solid;
+                }
+                svg.scatter-plot {
+                    width:100%;
+                }
+                .scatter-content-container .axis {
+                    stroke: #000;
+                    stroke-opacity: 0.2;
+                    font-size:12px;
+                }
+                svg.scatter-plot text {
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+                .scatter-content-container .axis .domain {         
+                    display: none;
+                }
+                .scatter-content-container .hidden {
+                    visibility:hidden;
+                }
+                .scatter-content-container .hovered {
+                    fill: white !important;
+                    stroke: #000;
+                }
+                .scatter-content-container .filters {
+                    height: 30px;
+                    background:#461AFF;
+                }
+                .scatter-content-container .filters button{
+                    border:0px;
+                    color:#000;
+                    background:#fff;
+                    box-shadow: 1px 1px 2px 0px;
+                }
+                .scatter-content-container select {
+                    width:120px;
+                    color:#000;
+                    -moz-border-radius: 0px;
+                    border-radius: 0px;
+                    border:0px;
+                    box-shadow: 1px 1px 2px 0px;
+                    -webkit-appearance: none;
+                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
+                    background-position: right 50%;
+                    background-repeat: no-repeat;
+                    background-color:#FFF;
+                    padding:0 5px;
+                    margin:5px;
+                }
+                .scatter-content-container .axis-filter {
+                    float:left;
+                    margin-right:20px;
+                    
+                }
+                .scatter-content-container h1, .scatter-content-container h3 {
+                    text-align: center;
+                }
+            /* Scatter plot tooltip */
+                .scatter-content-container .tooltip {
+                    position:absolute;
+                    min-width: 100px;
+                    opacity:.5;
+                    font: 12px sans-serif;
+                    color: #777;
+                    background: white;
+                    border: 1px solid;
+                    box-shadow: 0px 1px 10px 0px #777;
+                    pointer-events: none;
+                    padding:3px;
+                }
+                .scatter-content-container .tooltip span {
+                    color:#461AFF;
+                }
+                .scatter-content-container .tooltip strong {
+                    color:#461AFF
+                }
+        /* FILM DESCRIPTION */
+            #film-description {
+                border:10px #461AFF solid;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            #film-description p {
+                margin:20px;
+            }
+            #film-description strong {
+                color:#55545C;
+                font-size:.7em;
+            }
+            #film-description p {
+                padding:0;
+                margin:10px 20px;
+                color:#461AFF;
+
+            }
+            #film-description h3{
+                text-align: left;
+                padding:20px;
+                margin:0;
+                color:#461AFF;
+                color:#000;
+                text-decoration: underline;
+            }
+        /* DIRECTOR HIGHLIGHT */
+            #director-filter {
+                border:10px #461AFF solid;
+                overflow:hidden;
+                position:relative;
+                height:500px;
+            }
+            .dir-bar {
+                border-bottom:1px solid #999;
+                background:#fff;
+                cursor:pointer;
+
+                color:#777;
+                margin:0;
+                padding-left:10px;
+                vertical-align:middle;
+                font-size:14px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            #all-bar {
+                text-align:center;
+                background:#461AFF;
+                height:30px;                
+            }
+            #all-bar h3 {
+                font-size:1em;
+                margin:0;
+                padding:0;
+                color:#fff;
+            }
+            .dir-bar-container {
+                overflow:auto;
+                width:100%;
+                height:470px;
+            }
+            .highlighted-dir {
+                fill: red !important;
+                opacity: 1 !important;
+            }
+            .active-dir {
+                color: #fff;
+                background:#461AFF;
+            }
+            #reset-dir-filter {
+                color:#461AFF;
+                background:#fff;
+                position:absolute;
+                top:30px;
+                right:0;
+                padding:10px;
+                cursor:pointer;
+            }

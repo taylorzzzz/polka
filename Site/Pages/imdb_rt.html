@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Polkada</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+       
+        <!-- Bootstrap core CSS -->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="../assets/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container imdb-rt">
+            <!-- Header Section -->
+                <header>
+                    <h3 class="text-muted">Polkada</h3>
+                    <h4 class="text-info">Top Notch Visuals</h3>
+                </header>
+            <!-- Landing Section -->
+                <div class="section section-landing">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1>Comparing IMDb and Rotten Tomatoes</h1>
+                        </div>
+                    </div>
+                </div>
+            <!-- Histogram/Intro Section -->
+                <div class="section section-1">
+                    <div class="row">
+                        <div class="column col-md-6 col-xs-8 column-histogram">
+                            <div id="histo-container">
+                                <div id="histo-histograms-container">
+                                        <svg id="criticAVG-hist" ></svg>
+                                        <svg id="tomatometer-hist" ></svg>
+                                        <svg id="audienceAVG-hist" ></svg>
+                                        <svg id="audienceScore-hist" ></svg>
+                                        <svg id="imdb-hist" ></svg>
+                                </div>
+                                <div class="clear-space" style="clear:both"></div>
+                            </div>
+                        </div> 
+                        <div class="column col-md-2 col-xs-4">
+                            <div id="histo-slider-container">
+                                <svg type="rect" id="year-slider-v"></svg>
+                            </div>
+                        </div>
+                        <div class="column col-md-4 col-sm-12 right-column">
+                            <article>
+                            <p>
+                                <span>IMDb</span> and <span>Rotten Tomatoes</span>, are two of the most popular online movie rating websites today, each with their own approach to
+                                movie ratings. Between the two there are five main metrics used which are summarized below.
+                            </p>
+                            <div class="metric-description-container">
+                                <h3 class="metric-list-title">    
+                                    Five Rating Metrics:
+                                </h3>
+                                <ul class="metrics-list">
+                                    <li><span>Tomatometer:</span> The percentage of "Tomatometer Approved Critics" who gave the movie a positive review.
+                                    </li>
+                                    <li><span>Critic Average:</span> The average rating given by critics to the movie.
+                                    </li>
+                                    <li><span>Audience Score:</span> The percentage of RT users who rated the movie 3.5/5 or higher.
+                                    </li>
+                                    <li><span>Audience Average:</span> The average rating given by users to the movie.
+                                    </li>
+                                    <li><span>IMDb Rating:</span> The weighted average rating given to the movie by users.
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--
+                            <p>
+                                The IMDb score of a movie is a weighted mean of all user ratings. The exact 
+                                nature of this weighting is not divulged by the site but the stated purpose of using this calculation as opposed to 
+                                the raw arithmetic mean is that the weighting provides a better representation of the true rating of a movie, partly by
+                                reducing the impact of votes that seem to be made in an attempt to sway the rating of a movie (presumably this means extreme
+                                scores by users with few ratings).
+                            </p>
+                            <p>                            
+                                Unlike IMDb, they compile the reviews of Film CriticsThe most prominent is certainly the 
+                                Tomatometer score which measures the percentage of "Approved Tomatometer Critics"" who gave what RT deemed to be a positive 
+                                review. The actual number of  positive (Fresh) and negative (Rotten) reviews counted are listed below alongside the Average Critic Rating (out of 10).
+
+                            </p>
+                            <p>
+                                Here in the modern age of the 21st century, the positive and negative feelings I feel towards the things I consume are expessed
+                                in numbers and stars, cold and precise. After all, what good are such feelings if they stay cooped up in my head where
+                                no one can see them. 
+                            </p>
+                            -->
+                        </article>
+                        </div>
+                    </div>
+                </div>
+            <!-- Scatter Plot Section -->
+                <div class="section section-2">
+                    <div class="row">
+                        <div class="scatter-content-container">
+                            <div class="col col-md-3">
+                                <div id="film-description">
+                                    <h3>FILM INFO</h3>
+                                </div>
+                            </div>
+                            <div class="col col-md-7">
+                                <div class="scatter-content">
+                                    <div class="filters">       
+                                        <div class="axis-filter" id="x-filter">
+                                            <label for='.xaxis-sel' class="filter-label">X: </label>
+                                            <select class="xaxis-sel"></select>
+                                        </div>
+                                        <div class="axis-filter" id="y-filter">
+                                            <label for='.yaxis-sel' class="filter-label">Y: </label>
+                                            <select class="yaxis-sel"></select>
+                                        </div>
+                                    </div>
+                                    <svg class="scatter-plot"></svg>
+                                </div>
+                            </div>
+                            <div class="col col-md-2">
+                                <div id="director-filter"> 
+                                    <div id="all-bar">
+                                        <h3>Highlight Director</h3>
+                                    </div>
+                                    <div class="dir-bar-container">
+                                    </div>
+                                    <div id="reset-dir-filter">Reset</div>
+                                </div>
+                                <div class="clear-space" style="clear:both"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Footer Section -->
+                <footer class="footer">
+                    <p>&copy; 2016 Polkada.</p>
+                </footer>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+    </body>
+</html>
